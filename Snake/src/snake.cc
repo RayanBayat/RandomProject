@@ -1,5 +1,5 @@
 #include "snake.h"
-int grid_height{ 20 }, grid_width{ 20 }, speed{ 1 };
+
 
 void Snake::init()
 {
@@ -104,7 +104,7 @@ void Snake::move_snake()
 		snakeheadposY--;
 		if (snakeheadposY < 0)
 		{
-			snakeheadposY = grid_height;
+			snakeheadposY = grid_height-1;
 		}
 		break;
 	case down:
@@ -118,7 +118,7 @@ void Snake::move_snake()
 		snakeheadposX--;
 		if (snakeheadposX < 0)
 		{
-			snakeheadposX = grid_width;
+			snakeheadposX = grid_width-1;
 		}
 		break;
 	case right:

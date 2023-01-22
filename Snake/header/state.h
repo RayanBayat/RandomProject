@@ -19,8 +19,10 @@
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics.hpp>
+int const _width{ 600 }, _height{ 600 }, _max_FPS{ 10 };
+
 //int grid_height{ 20 }, grid_width{ 20 }, speed{ 1 };
-//int const _width{ 600 }, _height{ 600 }, _max_FPS{ 10 };
+
 class state
 {
 

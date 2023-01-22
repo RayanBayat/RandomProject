@@ -6,7 +6,6 @@
 
 
 
-
 class Game
 {
 private:

@@ -1,5 +1,5 @@
 #include "game.h"
-int const _width{ 600 }, _height{ 600 }, _max_FPS{ 10 };
+
 std::string _game_name{ "Snake" };
 bool _Vsync{ true };
 

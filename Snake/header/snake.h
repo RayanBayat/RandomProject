@@ -2,12 +2,13 @@
 #define SNAKE_H
 #include "state.h"
 
+
 enum direction { up, down, left, right };
 class Snake
 {
 private:
     
-    
+    int grid_height{ 20 }, grid_width{ 20 }, speed{ 1 };
 
     direction dir;
     std::vector<std::vector<sf::RectangleShape>> _grid;
