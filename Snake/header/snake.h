@@ -4,7 +4,7 @@
 
 
 enum direction { up, down, left, right };
-class Snake
+class Snake : public State
 {
 private:
     

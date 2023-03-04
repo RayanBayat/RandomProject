@@ -11,6 +11,8 @@
 #include <vector>
 #include<vector>
 #include <cmath>
+#include <iostream>
+#include <utility> 
 
 #include"SFML/System.hpp"
 #include"SFML/Window.hpp"
@@ -19,19 +21,26 @@
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics.hpp>
+
 int const _width{ 600 }, _height{ 600 }, _max_FPS{ 10 };
 
-//int grid_height{ 20 }, grid_width{ 20 }, speed{ 1 };
 
-class state
+enum States
+{ 
+	Menu_State,
+	Snake_State,
+	Mine_Sweeper
+};
+
+class State
 {
 
 private:
 
 public:
-	virtual ~state() = default;
-	virtual void handle_events() = 0;
-	virtual void draw() = 0;
+	virtual ~State() = default;
+	virtual void handle_events(sf::Event) = 0;
+	virtual void draw(std::unique_ptr<sf::RenderWindow>&) = 0;
 };
 
 #endif

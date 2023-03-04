@@ -9,10 +9,10 @@
 class Game
 {
 private:
-    int _window_height, _window_width;
+    int _window_height, _window_width, current_state;
     std::unique_ptr<sf::RenderWindow> _game_window;
-    Snake snake;
 
+    std::map<int, std::unique_ptr<State>> states;
     bool _game_running;
     sf::Event _input_event;
 
